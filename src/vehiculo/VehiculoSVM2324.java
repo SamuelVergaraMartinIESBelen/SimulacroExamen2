@@ -2,48 +2,77 @@
 package vehiculo;
 
 /**
- *
- * @author 
+ * @author Samuel Vergara Martín
+ * @version 1.0
+ * @since 28-04-2024
  */
 public class VehiculoSVM2324 {
 
+    /**
+     * Atributo que indica el nombre del vehiculo
+     */
     private String nombre;
+    /**
+     * Atributo que indica el precio del vehiculo
+     */
     private double precio;
+    /**
+     * Atributo que indica el precio del vehiculo con el IVA
+     */
     private double precioIVA;
+    /**
+     * Atributo que indica el numero de stock del vehiculo
+     */
     private int stock;
 
-    /* Constructor sin argumentos */
+    /**
+     * Constructor sin los atributos de la clase
+     */
     public VehiculoSVM2324 ()
     {
     }
-    // Constructor con parámetro para iniciar todas las propiedades de la clase
-    
-    
+    /**
+     * Constructor con parámetro para iniciar todas las propiedades de la clase
+     * @param nom
+     * @param precio
+     * @param stock 
+     */
     public VehiculoSVM2324 (String nom, double precio, int stock)
     {
         this.nombre =nom;
         this.precio=precio;
         this.stock=stock;
     }
-   // Método para asignar el nombre del vehiculo
+    /**
+     * Método para asignar el nombre del vehiculo
+     * @param nom Nombre del vehiculo
+     */
     public void asignarNombre(String nom)
     {
         setNombre(nom);
     }
-    // Método que me devuelve el nombre del vehiculo
+    /**
+     * Método que me devuelve el nombre del vehiculo
+     * @return el nombre del vehiculo
+     */
     public String obtenerNombre()
     {
         return getNombre();
     }
-
-    // Método que me devuelve el stock de vehiculos disponible en cada momento
+    /**
+     * Método que me devuelve el stock de vehiculos disponible en cada momento
+     * @return el numero del stock del vehiculo
+     */
      public int obtenerStock ()
     {
         return getStock();
     }
 
-    /* Método para comprar vehiculos. Modifica el stock.
+    /** 
+     * Método para comprar vehiculos. Modifica el stock.
      * Este método va a ser probado con Junit
+     * @param cantidad Cantidad de vehiculos a comprar
+     * @throws Exception 
      */
     public void comprar(int cantidad) throws Exception
     {
@@ -52,6 +81,11 @@ public class VehiculoSVM2324 {
         setStock(getStock() + cantidad);
     }
 
+    /**
+     * Método para vender vehículos
+     * @param cantidad Cantidad de vehículos a vender
+     * @throws Exception 
+     */
     public void vender (int cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -62,6 +96,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de selección del atributo nombre
      * @return the nombre
      */
     public String getNombre() {
@@ -69,6 +104,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de acceso del atributo nombre
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -76,6 +112,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de selección del atributo precio
      * @return the precio
      */
     public double getPrecio() {
@@ -83,6 +120,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de acceso del atributo precio
      * @param precio the precio to set
      */
     public void setPrecio(double precio) {
@@ -90,6 +128,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de selección del atributo precioIVA
      * @return the precioIVA
      */
     public double getPrecioIVA() {
@@ -97,6 +136,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de acceso del atributo precioIVA
      * @param precioIVA the precioIVA to set
      */
     public void setPrecioIVA(double precioIVA) {
@@ -104,6 +144,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de selección del atributo stock
      * @return the stock
      */
     public int getStock() {
@@ -111,6 +152,7 @@ public class VehiculoSVM2324 {
     }
 
     /**
+     * Método de acceso del atributo stock
      * @param stock the stock to set
      */
     public void setStock(int stock) {

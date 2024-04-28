@@ -2,8 +2,9 @@
 package vehiculo;
 
 /**
- *
- * @author 
+ * @author Samuel Vergara Martín
+ * @version 1.0
+ * @since 28-04-2024
  */
 public class Main {
     
@@ -17,7 +18,7 @@ public class Main {
         System.out.println("El stock actual es "+ stockActual );
     }
 
-    static void operativaVehiculosSVM2324(VehiculoSVM2324 miVehiculoSVM2324, Integer cantidad) {
+    public static void operativaVehiculosSVM2324(VehiculoSVM2324 miVehiculoSVM2324, Integer cantidad) {
         try
         {
             System.out.println("Venta de Vehiculos");
